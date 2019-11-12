@@ -65,7 +65,7 @@ docker exec -it pycharm_tensorflow_name /opt/pycharm/bin/pycharm.sh
 ```
 6. You have now both Jupyter notebooks (runing in browser on localhost:8888) and Pycharm exported to the local machine desktop.
 
-7. Enjoy your first training of an [image classifier](classifier.py)  using Pycharm from the docker in your local ubuntu desktop:
+7. Enjoy your first training of an [image classifier](classifier_example.py)  using Pycharm from the docker in your local ubuntu desktop:
 
 ![Pycharm Docker](pycharm_docker.png)
 
