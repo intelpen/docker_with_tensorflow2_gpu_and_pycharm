@@ -4,8 +4,11 @@ This small project shows how to make a docker image containing tensorflow2_gpu a
 
 ## Intro 
 Since tensorflow2, google decided to recommend a docker image as the easyiest way to enable gpu support(essential if you do anything related to Deep Learning).
+
 Still, to connect to that docker image with my favorite IDE (pycharm), you need the entreprise edition (the Comunity Edition does not have a remote conection).
+
 Here, we create a docker image containing the PyCharm CE and expose it by tunneling the xserver of the docker.
+
 
 ## Step to create and run your docker image 
 
