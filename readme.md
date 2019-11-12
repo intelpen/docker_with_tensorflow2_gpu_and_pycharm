@@ -13,7 +13,7 @@ Here, we create a docker image containing the PyCharm CE and expose it by tunnel
 ## Step to create and run your docker image 
 
 
-1. Follow tensorflow doc to be able to run [tensorflow_gpu container]( https://www.tensorflow.org/install/docker )
+1. Follow tensorflow documentation to be able to run a [tensorflow_gpu container]( https://www.tensorflow.org/install/docker )
 2. Create your Dockerfile (also in [this file](Dockerfile))
 ```
 FROM tensorflow/tensorflow:latest-gpu-py3-jupyter
@@ -49,7 +49,7 @@ USER developer
 docker run --gpus all -p 8888:8888 -it --rm --name pycharm_tensorflow_container -e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix -v `pwd`:/home/developer/ -v ~/.PyCharmCE2019.2:/home/developer/.PyCharmCE2019.2  -p 4040:4040 pycharm_tensorflow
 ```
 
-Interesting bits :
+Interesting bits:
 `-p 8888:8888` - enable your jupyter notebooks
 
 `-e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix` - export your display outside of the virtual machine
@@ -58,14 +58,16 @@ Interesting bits :
 
 `--name pycharm_tensorflow_container` the name of the container you will run to get the pycharm window
 
-5. Run your pycharm IDE
+5. Run your pycharm IDE from a new terminal
 
 ```
 docker exec -it pycharm_tensorflow_name /opt/pycharm/bin/pycharm.sh
 ```
+6. You have now both Jupyter notebooks (runing in browser on localhost:8888) and Pycharm exported to the local machine desktop.
 
-6. Enjoy your first training using Pycharm from the docker in your local ubuntu desktop:
+7. Enjoy your first training of an [image classifier](classifier.py)  using Pycharm from the docker in your local ubuntu desktop:
 
 ![Pycharm Docker](pycharm_docker.png)
+
 
 Thanks to Bejamin Tan for the [Spark version](https://benjamintan.io/blog/2019/09/22/using-pycharm-ce-in-docker-for-great-good/)
