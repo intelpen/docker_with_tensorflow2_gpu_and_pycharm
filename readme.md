@@ -48,8 +48,11 @@ docker run --gpus all -p 8888:8888 -it --rm --name pycharm_tensorflow_container 
 
 Interesting bits :
 `-p 8888:8888` - enable your jupyter notebooks
+
 `-e DISPLAY=${DISPLAY} -v /tmp/.X11-unix:/tmp/.X11-unix` - export your display outside of the virtual machine
+
 `-v `pwd`:/home/developer/ -v ~/.PyCharmCE2019.2:/home/developer/.PyCharmCE2019.2` - volumes for the code and for the Pycharm configuration
+
 `--name pycharm_tensorflow_container` the name of the container you will run to get the pycharm window
 
 5. Run your pycharm IDE
