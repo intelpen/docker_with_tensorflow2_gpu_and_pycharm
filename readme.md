@@ -62,4 +62,4 @@ docker exec -it pycharm_tensorflow_name /opt/pycharm/bin/pycharm.sh
 
 ![Pycharm Docker](pycharm_docker.png)
 
-Thanks to Bejamin Tan for the [Spark version] (https://benjamintan.io/blog/2019/09/22/using-pycharm-ce-in-docker-for-great-good/)
+Thanks to Bejamin Tan for the [Spark version](https://benjamintan.io/blog/2019/09/22/using-pycharm-ce-in-docker-for-great-good/)
